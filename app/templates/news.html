@@ -1,0 +1,26 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
+<!-- Content block -->
+{% block content %}
+<div class="container">
+
+    <!-- Poster background -->
+    <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 posterPath"
+            style="background: url({{news.poster}}) no-repeat center center">
+        </div>
+
+
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 news-details">
+            <h3>{{ news.title }}</h3>
+
+            <p class="overview"> {{ news.overview }}</p>
+
+            <p class="ratings"> <b> {{ news.vote_average }}</b> - <i>{{ news.vote_count}} votes </i> </p>
+            <a class="ratings" href="/news/review/new/{{news.id}}"> Write a new review</a>
+
+        </div>
+    </div>
+
+</div>
+{% endblock %}
