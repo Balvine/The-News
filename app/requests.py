@@ -7,7 +7,7 @@ import json,urllib.request
 
 #getting the api key
 
-api_key = None
+api_key = '1706e58027b54972b4a5f7584bc73739'
 #getting the news base url
 
 base_url = None
@@ -16,8 +16,8 @@ base_url = None
 articles_url = None
 
 def configure_request(app):
-	global api_key,base_url,articles_url
-	api_key = app.config['NEWS_API_KEY']
+	global api_key, base_url, articles_url
+	# api_key = app.config['NEWS_API_KEY']
 	base_url = app.config['NEWS_SOURCES_BASE_URL']
 	articles_url = app.config['ARTICLES_BASE_URL']
 
