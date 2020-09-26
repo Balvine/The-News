@@ -1,7 +1,9 @@
+import sys
+sys.path.append("../")
 import unittest
 from app.models import Articles
 
-class articlesTest(unittest.TestCase):
+class ArticlesTest(unittest.TestCase):
     '''
     Test Class to test the behaviour of the articles class
     '''
@@ -10,7 +12,11 @@ class articlesTest(unittest.TestCase):
         '''
         Set up method that will run before every Test
         '''
-        self.new_articles = articles()
+        self.new_articles = Articles()
 
     def test_instance(self):
-        self.assertTrue(isinstance(self.new_articles,articles))
+        self.assertTrue(isinstance(self.new_articles,Articles))
+
+
+if __name__ == "__main__":
+    unittest.main()
